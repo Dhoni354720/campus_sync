@@ -6,7 +6,7 @@ import {
   ChevronRight, Tag, Compass, User
 } from 'lucide-react';
 
-
+const BASE_URL = import.meta.env.VITE_API_URL;
 // --- Extended Mock Data ---
 const MOCK_EVENTS = [
   {
@@ -105,7 +105,7 @@ export default function Events() {
   const CATEGORIES = ['All', 'Technical', 'Cultural', 'Sports', 'Academic'];
   const [events, setEvents] = useState([]);
   useEffect(() => {
-  fetch("http://localhost:5000/api/events")
+  fetch("{BASE_URL}/api/events")
     .then(res => res.json())
     .then(data => {
       console.log("BACKEND EVENTS:", data);

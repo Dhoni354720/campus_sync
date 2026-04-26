@@ -8,6 +8,7 @@ import {
   CheckCircle2, AlertCircle, Heart
 } from 'lucide-react';
 
+const BASE_URL = import.meta.env.VITE_API_URL;
 // --- Detailed Mock Data for a Single Event ---
 
 export default function EventDetail() {
@@ -20,7 +21,7 @@ export default function EventDetail() {
 useEffect(() => {
   const fetchEvent = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/api/events/${id}`);
+      const res = await fetch(`{BASE_URL}/api/events/${id}`);
       const data = await res.json();
 
       setEvent({
