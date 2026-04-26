@@ -6,7 +6,7 @@ import {
   MapPin, Clock, Download, ChevronRight, Edit3, Tag
 } from 'lucide-react';
 
-
+const BASE_URL = import.meta.env.VITE_API_URL;
 // --- Mock User & Dashboard Data ---
 const STUDENT = {
   name: "Alex Johnson",
@@ -64,7 +64,7 @@ export default function Dashboard() {
 useEffect(() => {
   const fetchEvents = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/events");
+      const res = await fetch("https://campus-sync-79dz.onrender.com/api/events");
       const data = await res.json();
       setEvents(data);
     } catch (err) {
@@ -199,7 +199,7 @@ useEffect(() => {
     const token = localStorage.getItem("token");
 
     const res = await fetch(
-      `http://localhost:5000/api/events/${eventId}/register`,
+      `https://campus-sync-79dz.onrender.com/api/events/${eventId}/register`,
       {
         method: "POST",
         headers: {

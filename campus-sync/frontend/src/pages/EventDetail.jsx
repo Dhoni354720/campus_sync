@@ -21,7 +21,7 @@ export default function EventDetail() {
 useEffect(() => {
   const fetchEvent = async () => {
     try {
-      const res = await fetch(`{BASE_URL}/api/events/${id}`);
+      const res = await fetch(`https://campus-sync-79dz.onrender.com/api/events/${id}`);
       const data = await res.json();
 
       setEvent({

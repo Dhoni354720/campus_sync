@@ -105,7 +105,7 @@ export default function Events() {
   const CATEGORIES = ['All', 'Technical', 'Cultural', 'Sports', 'Academic'];
   const [events, setEvents] = useState([]);
   useEffect(() => {
-  fetch("{BASE_URL}/api/events")
+  fetch("https://campus-sync-79dz.onrender.com/api/events")
     .then(res => res.json())
     .then(data => {
       console.log("BACKEND EVENTS:", data);

@@ -51,7 +51,7 @@ export default function OrganizerPanel() {
   useEffect(() => {
   const fetchEvents = async () => {
     try {
-      const res = await fetch("{BASE_URL}/api/events");
+      const res = await fetch("https://campus-sync-79dz.onrender.com/api/events");
       const data = await res.json();
 
       console.log("Fetched events:", data);
@@ -68,7 +68,7 @@ export default function OrganizerPanel() {
   try {
     const token = localStorage.getItem("token");
 
-    const res = await fetch("{BASE_URL}/api/events", {
+    const res = await fetch("https://campus-sync-79dz.onrender.com/api/events", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

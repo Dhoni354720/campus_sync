@@ -35,7 +35,7 @@ const redirectUser = (user) => {
     setLoading(true);
 
     try {
-      const response = await fetch('{BASE_URL}/api/auth/login', {
+      const response = await fetch('https://campus-sync-79dz.onrender.com/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -82,7 +82,7 @@ try {
     setLoading(true);
 
     try {
-      const response = await fetch('{BASE_URL}/api/auth/register', {
+      const response = await fetch('https://campus-sync-79dz.onrender.com/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
